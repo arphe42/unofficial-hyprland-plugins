@@ -8,7 +8,7 @@
 stdenv.mkDerivation {
   pname = "split-monitor-workspaces";
   version = "1.0.0";
-  src = ./.
+  src = ./.;
 
   inherit (hyprland) nativeBuildInputs;
 
