@@ -11,7 +11,7 @@
     withPkgsFor = fn: nixpkgs.lib.genAttrs (builtins.attrNames hyprland.packages) (system: fn system nixpkgs.legacyPackages.${system});
   in {
     packages = withPkgsFor (system: pkgs: {
-      split-monitor-workspaces = pkgs.callPackage ./split-monitor-workspaces.nix {inherit (hyprland.packages.${system}) hyprland;};
+      split-monitor-workspaces = pkgs.callPackage ./split-monitor-workspaces {inherit (hyprland.packages.${system}) hyprland;};
     });
 
     devShells = withPkgsFor (system: pkgs: {
