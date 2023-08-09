@@ -1,6 +1,7 @@
 {
   lib,
   stdenv,
+  clang,
   hyprland,
 }:
 stdenv.mkDerivation {
